@@ -29,5 +29,12 @@ class MahasiswaViewModel: ViewModel() {
         }
     }
 
-
+    fun saveDataMhs(ls: MutableList<String>)
+    {
+        _mhsState.update { status -> status.copy(
+            nim = ls[0],
+            nama = ls[1],
+            email = ls[2]
+        )}
+    }
 }
